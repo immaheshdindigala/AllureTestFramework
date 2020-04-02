@@ -1,6 +1,7 @@
 //require('./PageObjects/all-page-objects.po.js')
 
 import { browser } from "protractor";
+import allureReporter from '@wdio/allure-reporter'
 
 var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 var d = new Date();
@@ -17,11 +18,11 @@ exports.config = {
 
   directConnect: true,
   ignoreUncaughtExceptions: true,
-  multiCapabilities: [
+  capabilities: {
 
-    {'browserName': 'chrome'},
-    {'browserName': 'firefox'}
-  ],
+    'browserName': 'chrome',
+    // {'browserName': 'firefox'}
+},
 
   // Spec patterns are relative to the current working directory when
   // Protractor is called.
@@ -69,6 +70,24 @@ exports.config = {
       })
     });
   },
+
+  reporters: ['allure'],
+    reporterOptions: {
+        allure: {
+            outputDir: 'allure-results1',
+            disableWebdriverStepsReporting: false,
+            disableWebdriverScreenshotsReporting: false,
+            useCucumberStepReporter: false
+        }
+    },
+    // // ...
+    // reporters: [['allure', {
+    //     outputDir: 'allure-results1',
+    //     disableWebdriverStepsReporting: true,
+    //     disableWebdriverScreenshotsReporting: true,
+    // }]],
+    // // ...
+
 
   //Setup the report before any tests start
   beforeLaunch: function () {

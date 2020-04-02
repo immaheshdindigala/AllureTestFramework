@@ -20,15 +20,18 @@
     "chai-as-promised": "^7.1.1",
     "iedriver": "^3.14.1",
     "jasmine": "^3.5.0",
-    "mocha-tesults-reporter": "^1.0.1",
-    "protractor": "^5.4.3",
-    "mocha": "^7.1.1",
-    "protractor-jasmine2-screenshot-reporter": "^0.5.0",
+    "jasmine-allure-reporter": "^1.0.2",
     "jasmine-reporters": "^2.3.2",
     "jasmine-spec-reporter": "^5.0.1",
-    "jasmine-allure-reporter": "^1.0.2"
+    "log4js": "^6.1.2",
+    "mocha": "^7.1.1",
+    "mocha-tesults-reporter": "^1.0.1",
+    "protractor": "^5.4.3",
+    "protractor-jasmine2-html-reporter": "^0.0.7",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0"
   },
   "devDependencies": {
-    "allure-commandline": "^2.13.0"
+    "allure-commandline": "^2.13.0",
+    "@wdio/allure-reporter": "^6.0.12"
   }
 }
